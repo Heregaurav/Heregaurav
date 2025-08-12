@@ -9,7 +9,7 @@
 - 💡 Skilled in **JavaScript, HTML, CSS, React, Node.js, PostgreSQL, jQuery**
 - 🛠 Currently diving deeper into:
   - **Embedded Software Engineering**
-  - **Cybersecurity Fundamentals & Ethical Hacking**
+  - **Cybersecurity Fundamentals**
 - 🌟 Passionate about **secure systems, and end-to-end product development**
 - 🎯 Goal: Build **futuristic, secure, and scalable projects** combining hardware + software
 
