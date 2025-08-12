@@ -1,4 +1,4 @@
-# Hi there, I'm Gaurav 👋
+# Hi there, I'm Gaurav 
 
  **Electronics & Communication Engineering Student** | 💻 **Full-Stack Developer** | 🔐 **Cybersecurity Enthusiast** | ⚙ **Embedded Systems Learner**
 
