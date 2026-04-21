@@ -1,14 +1,14 @@
 # Hi there, I'm Gaurav 
 
- **Electronics & Communication Engineering Student** | 💻 **Full-Stack Developer** | 🔐 **Cybersecurity Enthusiast** | ⚙ **Embedded Systems Learner**
+ **Electronics & Communication Engineering Student** | 💻 **Full-Stack Developer** | 🔐 **Cybersecurity Enthusiast** | ⚙ ** Deep learning and Embedded  Systems Learner**
 
 ---
 
 ### 👨‍💻 About Me
 - 🎓 3rd Year B.Tech in **Electronics & Communication** @ IIIT Dharwad
-- 💡 Skilled in **JavaScript, HTML, CSS, React, Node.js, PostgreSQL, jQuery**
+- 💡 Skilled in ** C++ , Python , Cuda , Open Mp , Open Acc , JavaScript, HTML, CSS, React, Node.js, PostgreSQL, jQuery , Docker , Kurbernets ,burpsuit , Nmap , OSWAP tools **
 - 🛠 Currently diving deeper into:
-  - **Embedded Software Engineering**
+  - ** Software Engineering and Deep Learning **
   - **Cybersecurity Fundamentals**
 - 🌟 Passionate about **secure systems, and end-to-end product development**
 - 🎯 Goal: Build **futuristic, secure, and scalable projects** combining hardware + software
