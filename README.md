@@ -22,7 +22,7 @@
 
 ---
 
-## `> netstat -connect`
+## `netstat -connect`
 
 <div align="center">
 
@@ -34,21 +34,22 @@
 </div>
 
 <div align="center">
-  <code style="display: inline-block; text-align: left; padding: 20px; border: 1px solid #00ff41; background: #040b04; color: #ffffff; font-family: monospace; border-radius: 6px;">
-    ║ "The quieter you become, the more you are able to hear."║ <br>
-   <span style="color: #00aa22; float: right;">— KALI linux</span>
-  </code>
-</div>
-
-
-<div align="center">
 
 ![Visitor Count](https://komarev.com/ghpvc/?username=Heregaurav&color=00ff41&style=flat-square&label=RECON+ATTEMPTS)
 
-```
-
-[ STATUS: ONLINE ] | [ VPN: ACTIVE ] | [ TRACE: NONE ] | </gaurav>
-
-```
-
+</div>
+<div align="center">
+  <div style="max-width: 600px; border: 1px solid #00ff41; background: #040b04; font-family: 'Share Tech Mono', monospace; border-radius: 4px; overflow: hidden; box-shadow: 0 0 10px rgba(0, 255, 65, 0.15);">
+    <div style="background: rgba(0, 255, 65, 0.1); border-bottom: 1px solid rgba(0, 255, 65, 0.3); padding: 6px 12px; text-align: left; font-size: 11px; color: #00ff41; letter-spacing: 2px;">
+      ⊘ SYSTEM_QUOTE // INTERCEPTED
+    </div>
+    <div style="padding: 24px; text-align: center;">
+      <p style="color: #ffffff; font-size: 15px; margin: 0 0 12px 0; letter-spacing: 0.5px; line-height: 1.5;">
+        "The quieter you become, the more you are able to hear."
+      </p>
+      <p style="color: #00ff41; font-size: 12px; margin: 0; opacity: 0.7; letter-spacing: 1px;">
+        — KALI LINUX MOTTO
+      </p>
+    </div>
+  </div>
 </div>
