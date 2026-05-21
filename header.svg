@@ -226,8 +226,8 @@
 
   <g transform="translate(50, 30)">
     <text x="70" y="300" class="dim">  &gt;  B.Tech student navigating the intersection of Security &amp; Development</text>
-    <text x="70" y="335" class="dim">  &gt;  Passionate about Cybersecurity, Software Development, Networking and AI integrations</text>
-    <text x="70" y="370" class="dim">  &gt;  Mission: Build futuristic, robust architecture. Break it to make it stronger.</text>
+    <text x="70" y="335" class="dim">  &gt;  Passionate about Cybersecurity, Software Development, Networking and AI </text>
+    <text x="70" y="370" class="dim">  &gt;  Mission: Build futuristic, robust architecture. Break it to make it stronger</text>
   </g>
 
   <line x1="60" y1="450" x2="800" y2="450" stroke="#00ff41" stroke-width="1" opacity="0.15"/>
