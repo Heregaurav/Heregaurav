@@ -33,14 +33,13 @@
 
 </div>
 
----
 <div align="center">
-  <code style="display: inline-block; text-align: left; padding: 20px; border: 1px solid #00ff41; background: #040b04; color: #ffffff; font-family: monospace; border-radius: 6px;">
+  <code style="display: inline-block; text-align: left; padding: 60px; border: 1px solid #00ff41; background: #040b04; color: #ffffff; font-family: monospace; border-radius: 6px;">
     ║ "The quieter you become, the more you are able to hear."  ║ <br>
    <span style="color: #00aa22; float: right;">— KALI linux </span>
   </code>
 </div>
----
+
 
 <div align="center">
 
