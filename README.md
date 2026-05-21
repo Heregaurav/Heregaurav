@@ -24,9 +24,9 @@
 
 ```bash
 Name        : Gaurav Kumar
-Role        : ECE Student | Full-Stack Dev | Security Researcher
-Institute   : IIIT Dharwad — B.Tech Electronics & Communication (3rd Year)
-Focus       : Secure Systems · Deep Learning · Embedded Hardware
+Role        : ECE Student | Cybersecurity  | Full-Stack Dev 
+Institute   : IIIT Dharwad 
+Focus       : Secure Systems · Software development . 
 Mission     : Build futuristic, secure, scalable tech at the hardware-software boundary
 Status      : [████████████░░░░░░░░] 60% through undergrad
 ```
