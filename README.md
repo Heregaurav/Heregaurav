@@ -1,13 +1,6 @@
-<!-- ============================================================ -->
-<!--        GAURAV KUMAR — HACKER-THEMED GITHUB PROFILE          -->
-<!-- ============================================================ -->
 
 <div align="center">
 
-<!-- 
-  STEP 1: Upload header.svg to your special repo (Heregaurav/Heregaurav)
-  Then use this line to embed it:
--->
 
 ![Header](./header.svg)
 
@@ -15,22 +8,7 @@
 
 ---
 
-## `> cat about.txt`
-
-```bash
-$ ./init_gaurav.sh --verbose
-
-[+] Name         : Gaurav Kumar
-[+] Role         : 3rd Year B.Tech ECE @ IIIT Dharwad
-[+] Focus        : Full-Stack Dev | Cybersecurity | Deep Learning | Embedded
-[+] Status       : [ ACTIVELY HACKING KNOWLEDGE ]
-[+] Mode         : Attacker mindset. Defender skillset.
-[OK] Profile initialized successfully.
-```
-
----
-
-## `> ps aux | grep active`
+## `$ ps aux | grep active`
 
 ```diff
 + [RUNNING]  Web App Pentesting — OWASP Top 10, Burp Suite, Recon automation
@@ -79,8 +57,6 @@ $ ./init_gaurav.sh --verbose
 ### 🟡 Embedded Systems
 
 ![Arduino](https://img.shields.io/badge/Arduino-00979D?style=flat-square&logo=arduino&logoColor=white)
-![ESP32](https://img.shields.io/badge/ESP32-E7352C?style=flat-square&logo=espressif&logoColor=white)
-
 ---
 
 ## `> ./scan --proficiency`
@@ -88,9 +64,6 @@ $ ./init_gaurav.sh --verbose
 ```
 FULL-STACK DEV   [████████████████████░░░] 88%
 CYBERSECURITY    [████████████████░░░░░░░] 72%
-PARALLEL COMP.   [█████████████████░░░░░░] 78%
-DEEP LEARNING    [██████████████░░░░░░░░░] 65%
-EMBEDDED SYS.    [████████████████░░░░░░░] 70%
 ```
 
 ---
@@ -99,11 +72,9 @@ EMBEDDED SYS.    [████████████████░░░░�
 
 <div align="center">
 
-![Stats](https://github-readme-stats.vercel.app/api?username=Heregaurav&show_icons=true&theme=chartreuse-dark&border_color=00ff41&bg_color=050f05&title_color=00ff41&icon_color=00f5ff&text_color=00cc33)
-
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Heregaurav&layout=compact&theme=chartreuse-dark&border_color=00ff41&bg_color=050f05&title_color=00ff41&text_color=00cc33)
-
-[![Streak](https://streak-stats.demolab.com?user=Heregaurav&theme=dark&background=050f05&ring=00ff41&fire=ff003c&currStreakLabel=00f5ff&sideLabels=00cc33&currStreakNum=00ff41&sideNums=00cc33&dates=008822&border=1a3a1a)](https://git.io/streak-stats)
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=Heregaurav&show_icons=true&theme=chartreuse-dark&bg_color=0d1117&border_color=00FF41&icon_color=00FF41&title_color=00FF41&text_color=c9d1d9&hide_border=false)
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Heregaurav&layout=compact&theme=chartreuse-dark&bg_color=0d1117&border_color=00FF41&title_color=00FF41&text_color=c9d1d9)
+[![GitHub Streak](https://streak-stats.demolab.com?user=Heregaurav&theme=dark&background=0D1117&border=00FF41&stroke=00FF41&ring=00FF41&fire=FF003C&currStreakLabel=00FF41&sideLabels=00FF41&dates=c9d1d9&hide_border=false)](https://git.io/streak-stats)
 
 ![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=Heregaurav&theme=chartreuse-dark&bg_color=050f05&color=00ff41&line=00ff41&point=ff003c&area=true)
 
