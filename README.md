@@ -1,147 +1,147 @@
-```
- ██████╗  █████╗ ██╗   ██╗██████╗  █████╗ ██╗   ██╗
-██╔════╝ ██╔══██╗██║   ██║██╔══██╗██╔══██╗██║   ██║
-██║  ███╗███████║██║   ██║██████╔╝███████║██║   ██║
-██║   ██║██╔══██║██║   ██║██╔══██╗██╔══██║╚██╗ ██╔╝
-╚██████╔╝██║  ██║╚██████╔╝██║  ██║██║  ██║ ╚████╔╝ 
- ╚═════╝ ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝  ╚═══╝  
-```
+<!-- ============================================================ -->
+<!--        GAURAV KUMAR — HACKER-THEMED GITHUB PROFILE          -->
+<!-- ============================================================ -->
 
 <div align="center">
 
-![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=00FF41&background=000000&center=true&vCenter=true&width=600&lines=ECE+%40+IIIT+Dharwad+%7C+3rd+Year;Full-Stack+Developer+%7C+CyberSecurity;CUDA+%7C+Deep+Learning+%7C+Embedded+Systems;Breaking+Things+to+Build+Better+Ones.)
+<!-- 
+  STEP 1: Upload header.svg to your special repo (Heregaurav/Heregaurav)
+  Then use this line to embed it:
+-->
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/gaurav-kumar-182710329/)
-[![Portfolio](https://img.shields.io/badge/Portfolio-%2300FF41.svg?style=for-the-badge&logo=vercel&logoColor=black)](https://gaurav07portfolio.vercel.app/)
-[![Email](https://img.shields.io/badge/Email-%23FF003C.svg?style=for-the-badge&logo=gmail&logoColor=white)](mailto:gauaravkumar0123xyz@gmail.com)
-[![GitHub](https://img.shields.io/badge/GitHub-%23181717.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Heregaurav)
+![Header](./header.svg)
 
 </div>
 
 ---
 
-## `$ whoami`
+## `> cat about.txt`
 
 ```bash
-Name        : Gaurav Kumar
-Role        : ECE Student | Cybersecurity  | Full-Stack Dev 
-Institute   : IIIT Dharwad 
-Focus       : Secure Systems · Software development . 
-Mission     : Build futuristic, secure, scalable tech at the hardware-software boundary
-Status      : [████████████░░░░░░░░] 60% through undergrad
+$ ./init_gaurav.sh --verbose
+
+[+] Name         : Gaurav Kumar
+[+] Role         : 3rd Year B.Tech ECE @ IIIT Dharwad
+[+] Focus        : Full-Stack Dev | Cybersecurity | Deep Learning | Embedded
+[+] Status       : [ ACTIVELY HACKING KNOWLEDGE ]
+[+] Mode         : Attacker mindset. Defender skillset.
+[OK] Profile initialized successfully.
 ```
 
 ---
 
-## `$ cat /etc/current_objectives`
+## `> ps aux | grep active`
 
-```
-[*] Offensive Security    — Binary exploitation, reverse engineering, CTF challenges
-[*] Deep Learning         — CUDA-accelerated neural networks & embedded AI on MCUs
-[*] Web Pentesting        — OWASP Top 10, Burp Suite automation, recon workflows
-[*] Secure Infrastructure — Hardened Docker/K8s deployments, secure CI/CD pipelines
-[*] Software Engineering  — Scalable backend architecture & system design patterns
+```diff
++ [RUNNING]  Web App Pentesting — OWASP Top 10, Burp Suite, Recon automation
++ [RUNNING]  CUDA-accelerated Deep Learning — CNNs, Transformers
++ [RUNNING]  Software Engineering patterns & scalable architecture
+! [QUEUED]   Reverse Engineering & Binary Exploitation
+! [QUEUED]   Kernel internals & OS security
+! [QUEUED]   CTF challenges & exploit development
 ```
 
 ---
 
-## `$ ls -la /home/gaurav/arsenal/`
+## `> ls -la /skills/`
 
-### ⚙️ Languages & Compute
+### 🔴 Offensive & Security
 
-![C++](https://img.shields.io/badge/C++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white)
-![Python](https://img.shields.io/badge/Python-%233670A0.svg?style=for-the-badge&logo=python&logoColor=ffdd54)
-![CUDA](https://img.shields.io/badge/CUDA-%2376B900.svg?style=for-the-badge&logo=nvidia&logoColor=white)
-![OpenMP](https://img.shields.io/badge/OpenMP-%23008080.svg?style=for-the-badge&logoColor=white)
-![C](https://img.shields.io/badge/C-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white)
-![Bash](https://img.shields.io/badge/Bash-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white)
+![Burp Suite](https://img.shields.io/badge/Burp_Suite-FF4500?style=flat-square&logo=burpsuite&logoColor=white)
+![Nmap](https://img.shields.io/badge/Nmap-4B0082?style=flat-square&logo=linux&logoColor=00ff41)
+![Wireshark](https://img.shields.io/badge/Wireshark-1679A7?style=flat-square&logo=wireshark&logoColor=white)
+![OWASP](https://img.shields.io/badge/OWASP-000000?style=flat-square&logo=owasp&logoColor=00ff41)
+![Kali Linux](https://img.shields.io/badge/Kali_Linux-557C94?style=flat-square&logo=kalilinux&logoColor=white)
+![Metasploit](https://img.shields.io/badge/Metasploit-2596CD?style=flat-square&logo=metasploit&logoColor=white)
 
-### 🌐 Web Stack
+### 🟢 Languages & Compute
 
-![React](https://img.shields.io/badge/React-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-![Node.js](https://img.shields.io/badge/Node.js-6DA55F.svg?style=for-the-badge&logo=node.js&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
-![HTML5](https://img.shields.io/badge/HTML5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
-![jQuery](https://img.shields.io/badge/jQuery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white)
+![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=flat-square&logo=c%2B%2B&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3670A0?style=flat-square&logo=python&logoColor=00ff41)
+![CUDA](https://img.shields.io/badge/CUDA-76B900?style=flat-square&logo=nvidia&logoColor=white)
+![OpenMP](https://img.shields.io/badge/OpenMP-0071C5?style=flat-square&logo=openmp&logoColor=white)
+![OpenACC](https://img.shields.io/badge/OpenACC-76B900?style=flat-square&logo=nvidia&logoColor=white)
+![C](https://img.shields.io/badge/C-00599C?style=flat-square&logo=c&logoColor=white)
+![Bash](https://img.shields.io/badge/Bash-121011?style=flat-square&logo=gnu-bash&logoColor=00ff41)
 
-### 🔐 Offensive Security & Networking
+### 🔵 Full-Stack & Infrastructure
 
-![Kali Linux](https://img.shields.io/badge/Kali_Linux-557C94.svg?style=for-the-badge&logo=kali-linux&logoColor=white)
-![Burp Suite](https://img.shields.io/badge/Burp_Suite-FF6633.svg?style=for-the-badge&logo=burp-suite&logoColor=white)
-![Wireshark](https://img.shields.io/badge/Wireshark-1679A7.svg?style=for-the-badge&logo=wireshark&logoColor=white)
-![Nmap](https://img.shields.io/badge/Nmap-%23000000.svg?style=for-the-badge&logo=nmap&logoColor=00FF41)
-![Metasploit](https://img.shields.io/badge/Metasploit-%232596BE.svg?style=for-the-badge&logo=metasploit&logoColor=white)
-![OWASP](https://img.shields.io/badge/OWASP-%23000000.svg?style=for-the-badge&logo=owasp&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=node.js&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=flat-square&logo=postgresql&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
+![jQuery](https://img.shields.io/badge/jQuery-0769AD?style=flat-square&logo=jquery&logoColor=white)
 
-### ⚡ DevOps, Infra & Embedded
+### 🟡 Embedded Systems
 
-![Docker](https://img.shields.io/badge/Docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
-![Kubernetes](https://img.shields.io/badge/Kubernetes-%23326ce5.svg?style=for-the-badge&logo=kubernetes&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624.svg?style=for-the-badge&logo=linux&logoColor=black)
-![Arduino](https://img.shields.io/badge/Arduino-00979D.svg?style=for-the-badge&logo=arduino&logoColor=white)
-![ESP32](https://img.shields.io/badge/ESP32-E7352C.svg?style=for-the-badge&logo=espressif&logoColor=white)
-![Git](https://img.shields.io/badge/Git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
+![Arduino](https://img.shields.io/badge/Arduino-00979D?style=flat-square&logo=arduino&logoColor=white)
+![ESP32](https://img.shields.io/badge/ESP32-E7352C?style=flat-square&logo=espressif&logoColor=white)
 
 ---
 
-## `$ ./github_stats --user=Heregaurav`
+## `> ./scan --proficiency`
+
+```
+FULL-STACK DEV   [████████████████████░░░] 88%
+CYBERSECURITY    [████████████████░░░░░░░] 72%
+PARALLEL COMP.   [█████████████████░░░░░░] 78%
+DEEP LEARNING    [██████████████░░░░░░░░░] 65%
+EMBEDDED SYS.    [████████████████░░░░░░░] 70%
+```
+
+---
+
+## `> curl api.github.com/users/Heregaurav/stats`
 
 <div align="center">
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=Heregaurav&show_icons=true&theme=chartreuse-dark&bg_color=0d1117&border_color=00FF41&icon_color=00FF41&title_color=00FF41&text_color=c9d1d9&hide_border=false)
+![Stats](https://github-readme-stats.vercel.app/api?username=Heregaurav&show_icons=true&theme=chartreuse-dark&border_color=00ff41&bg_color=050f05&title_color=00ff41&icon_color=00f5ff&text_color=00cc33)
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Heregaurav&layout=compact&theme=chartreuse-dark&bg_color=0d1117&border_color=00FF41&title_color=00FF41&text_color=c9d1d9)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Heregaurav&layout=compact&theme=chartreuse-dark&border_color=00ff41&bg_color=050f05&title_color=00ff41&text_color=00cc33)
 
-[![GitHub Streak](https://streak-stats.demolab.com?user=Heregaurav&theme=dark&background=0D1117&border=00FF41&stroke=00FF41&ring=00FF41&fire=FF003C&currStreakLabel=00FF41&sideLabels=00FF41&dates=c9d1d9&hide_border=false)](https://git.io/streak-stats)
+[![Streak](https://streak-stats.demolab.com?user=Heregaurav&theme=dark&background=050f05&ring=00ff41&fire=ff003c&currStreakLabel=00f5ff&sideLabels=00cc33&currStreakNum=00ff41&sideNums=00cc33&dates=008822&border=1a3a1a)](https://git.io/streak-stats)
+
+![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=Heregaurav&theme=chartreuse-dark&bg_color=050f05&color=00ff41&line=00ff41&point=ff003c&area=true)
 
 </div>
 
 ---
 
-## `$ netstat --connections open`
+## `> netstat -connect`
 
-```
-PROTO   LOCAL               REMOTE               STATE
-──────────────────────────────────────────────────────────
-TCP     gaurav:brain        linkedin.com:443     ESTABLISHED  →  linkedin.com/in/gaurav-kumar-182710329
-TCP     gaurav:projects     vercel.app:443       ESTABLISHED  →  gaurav07portfolio.vercel.app
-TCP     gaurav:inbox        gmail.com:443        LISTENING    →  gauaravkumar0123xyz@gmail.com
-TCP     gaurav:code         github.com:443       ESTABLISHED  →  github.com/Heregaurav
-```
+<div align="center">
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/gaurav-kumar-182710329/)
+[![Portfolio](https://img.shields.io/badge/Portfolio-00FF41?style=for-the-badge&logo=vercel&logoColor=black)](https://gaurav07portfolio.vercel.app/)
+[![Email](https://img.shields.io/badge/Email-FF003C?style=for-the-badge&logo=gmail&logoColor=white)](mailto:gauaravkumar0123xyz@gmail.com)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=00ff41)](https://github.com/Heregaurav)
+
+</div>
 
 ---
 
-## `$ cat /var/log/threat_model.txt`
-
 ```
-[ATTACK SURFACE ANALYZED]
-├── Web Applications  ──► XSS · SQLi · CSRF · IDOR · Auth Bypass
-├── Network Layer     ──► Packet sniffing · Port scanning · MITM
-├── Embedded Systems  ──► Firmware analysis · UART · JTAG
-└── Infrastructure    ──► Container escape · Privilege escalation
-
-[DEFENSIVE POSTURE]
-├── Secure code review & threat modeling
-├── OWASP-compliant development practices  
-├── Zero-trust architecture & least privilege
-└── Security-first full-stack product development
+╔══════════════════════════════════════════════════════════════════╗
+║  "The quieter you become, the more you are able to hear."       ║
+║                                          — Kali Linux motto     ║
+║                                                                  ║
+║  "Think like an attacker. Build like a defender."               ║
+║                                          — Gaurav Kumar         ║
+╚══════════════════════════════════════════════════════════════════╝
 ```
 
 ---
 
 <div align="center">
 
-```
-┌──────────────────────────────────────────────────────────────┐
-│  "The quieter you become, the more you are able to hear."    │
-│                                          — Kali Linux motto  │
-│                                                              │
-│  [ STATUS: LEARNING ] [ MODE: HACKING ] [ TRACE: NONE ]      │
-└──────────────────────────────────────────────────────────────┘
-```
+![Visitor Count](https://komarev.com/ghpvc/?username=Heregaurav&color=00ff41&style=flat-square&label=RECON+ATTEMPTS)
 
-![Visitor Count](https://komarev.com/ghpvc/?username=Heregaurav&color=00ff41&style=for-the-badge&label=TERMINAL+SESSIONS)
+```
+[ STATUS: ONLINE ] | [ VPN: ACTIVE ] | [ TRACE: NONE ] | </gaurav>
+```
 
 </div>
