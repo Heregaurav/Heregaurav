@@ -9,7 +9,7 @@
 
 <div align="center">
 
-![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=00FF41&background=000000&center=true&vCenter=true&width=600&lines=ECE+%40+IIIT+Dharwad+%7C+3rd+Year;Full-Stack+Developer+%7C+Security+Researcher;CUDA+%7C+Deep+Learning+%7C+Embedded+Systems;Breaking+Things+to+Build+Better+Ones.)
+![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=00FF41&background=000000&center=true&vCenter=true&width=600&lines=ECE+%40+IIIT+Dharwad+%7C+3rd+Year;Full-Stack+Developer+%7C+CyberSecurity;CUDA+%7C+Deep+Learning+%7C+Embedded+Systems;Breaking+Things+to+Build+Better+Ones.)
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/gaurav-kumar-182710329/)
 [![Portfolio](https://img.shields.io/badge/Portfolio-%2300FF41.svg?style=for-the-badge&logo=vercel&logoColor=black)](https://gaurav07portfolio.vercel.app/)
