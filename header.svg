@@ -1,55 +1,60 @@
-<svg width="860" height="380" xmlns="http://www.w3.org/2000/svg">
+<svg width="860" height="650" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&amp;family=Orbitron:wght@700;900');
 
-      .bg { fill: #050f05; }
-      .border { fill: none; stroke: #00ff41; stroke-width: 1; opacity: 0.5; }
-      .border-bright { fill: none; stroke: #00ff41; stroke-width: 1.5; }
+      .bg { fill: #040b04; }
+      .grid { fill: url(#gridPattern); }
+      .border { fill: #00ff41; opacity: 0.03; }
+      .border-line { fill: none; stroke: #00ff41; stroke-width: 1; opacity: 0.4; }
+      
       .title {
         font-family: 'Orbitron', 'Courier New', monospace;
-        font-size: 32px;
+        font-size: 38px;
         font-weight: 900;
         fill: #00ff41;
-        letter-spacing: 4px;
+        letter-spacing: 6px;
       }
       .sub {
         font-family: 'Share Tech Mono', 'Courier New', monospace;
-        font-size: 12px;
+        font-size: 14px;
         fill: #00cc33;
-        letter-spacing: 2px;
-      }
-      .prompt {
-        font-family: 'Share Tech Mono', 'Courier New', monospace;
-        font-size: 13px;
-        fill: #00ff41;
+        letter-spacing: 3px;
       }
       .prompt-cyan {
         font-family: 'Share Tech Mono', 'Courier New', monospace;
-        font-size: 13px;
+        font-size: 15px;
         fill: #00f5ff;
+        font-weight: bold;
+      }
+      .prompt {
+        font-family: 'Share Tech Mono', 'Courier New', monospace;
+        font-size: 15px;
+        fill: #00ff41;
       }
       .dim {
         font-family: 'Share Tech Mono', 'Courier New', monospace;
-        font-size: 12px;
-        fill: #00882a;
+        font-size: 14px;
+        fill: #00aa33;
+        letter-spacing: 0.5px;
       }
       .label {
         font-family: 'Share Tech Mono', 'Courier New', monospace;
-        font-size: 10px;
+        font-size: 12px;
         fill: #00aa22;
         letter-spacing: 2px;
       }
       .status {
         font-family: 'Share Tech Mono', 'Courier New', monospace;
-        font-size: 10px;
-        fill: #005510;
-        letter-spacing: 1px;
+        font-size: 11px;
+        fill: #00771a;
+        letter-spacing: 1.5px;
       }
       .tag-text {
         font-family: 'Share Tech Mono', 'Courier New', monospace;
-        font-size: 10px;
-        letter-spacing: 1px;
+        font-size: 11px;
+        letter-spacing: 1.5px;
+        font-weight: bold;
       }
       .cursor-rect {
         fill: #00ff41;
@@ -59,8 +64,9 @@
         animation: glitch 5s infinite;
       }
       .scan-line {
-        animation: scan 2.5s linear infinite;
+        animation: scan 3s linear infinite;
       }
+      
       @keyframes blink {
         0%, 100% { opacity: 1; }
         50% { opacity: 0; }
@@ -72,182 +78,201 @@
         92% { transform: none; }
       }
       @keyframes scan {
-        0% { transform: translateX(-900px); }
-        100% { transform: translateX(900px); }
+        0% { transform: translateY(-100px); }
+        100% { transform: translateY(750px); }
       }
       .pulse {
         animation: pulse 2s ease-in-out infinite;
       }
       @keyframes pulse {
-        0%, 100% { opacity: 0.5; }
+        0%, 100% { opacity: 0.4; }
         50% { opacity: 1; }
-      }
-      .dot-anim {
-        animation: blink 1.5s infinite;
       }
     </style>
 
-    <!-- Glow filter -->
+    <!-- Glowing Effects -->
     <filter id="glow">
-      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
       <feMerge>
         <feMergeNode in="coloredBlur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
     <filter id="glow-sm">
-      <feGaussianBlur stdDeviation="1" result="coloredBlur"/>
+      <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
       <feMerge>
         <feMergeNode in="coloredBlur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
 
-    <!-- Scanline pattern -->
-    <pattern id="scanlines" x="0" y="0" width="860" height="4" patternUnits="userSpaceOnUse">
-      <rect width="860" height="2" fill="none"/>
-      <rect y="2" width="860" height="2" fill="#00ff41" opacity="0.012"/>
+    <!-- Grid and Scanlines -->
+    <pattern id="gridPattern" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#00ff41" stroke-width="0.5" opacity="0.1"/>
+    </pattern>
+    <pattern id="scanlines" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="2" fill="#000000" opacity="0.3"/>
     </pattern>
   </defs>
 
-  <!-- Background -->
-  <rect width="860" height="380" class="bg"/>
-  <!-- Scanline overlay -->
-  <rect width="860" height="380" fill="url(#scanlines)"/>
+  <!-- Background Base -->
+  <rect width="860" height="650" class="bg"/>
+  
+  <!-- Tactical Grid -->
+  <rect width="860" height="650" class="grid"/>
+  
+  <!-- CRT Scanline overlay -->
+  <rect width="860" height="650" fill="url(#scanlines)"/>
 
-  <!-- Outer border -->
-  <rect x="8" y="8" width="844" height="364" class="border" rx="2"/>
+  <!-- Main Terminal Box -->
+  <rect x="12" y="12" width="836" height="626" class="border" rx="4"/>
+  <rect x="12" y="12" width="836" height="626" class="border-line" rx="4"/>
 
-  <!-- Corner accents -->
-  <polyline points="8,28 8,8 28,8" class="border-bright" filter="url(#glow-sm)"/>
-  <polyline points="832,8 852,8 852,28" class="border-bright" filter="url(#glow-sm)"/>
-  <polyline points="8,352 8,372 28,372" class="border-bright" filter="url(#glow-sm)"/>
-  <polyline points="832,372 852,372 852,352" class="border-bright" filter="url(#glow-sm)"/>
+  <!-- Cyberpunk Corner Accents -->
+  <path d="M 12 40 L 12 12 L 40 12" fill="none" stroke="#00ff41" stroke-width="2" filter="url(#glow-sm)"/>
+  <path d="M 848 40 L 848 12 L 820 12" fill="none" stroke="#00ff41" stroke-width="2" filter="url(#glow-sm)"/>
+  <path d="M 12 610 L 12 638 L 40 638" fill="none" stroke="#00ff41" stroke-width="2" filter="url(#glow-sm)"/>
+  <path d="M 848 610 L 848 638 L 820 638" fill="none" stroke="#00ff41" stroke-width="2" filter="url(#glow-sm)"/>
 
-  <!-- Top label -->
-  <rect x="20" y="2" width="190" height="14" fill="#050f05"/>
-  <text x="26" y="13" class="label">[ README.md ] — DECRYPTED</text>
+  <!-- Top Tab / Label -->
+  <rect x="25" y="0" width="220" height="18" fill="#040b04" stroke="#00ff41" stroke-width="1" opacity="0.8"/>
+  <text x="35" y="13" class="label" fill="#00ff41">[ README.md ] — DECRYPTED</text>
 
   <!-- Scanning line animation -->
-  <rect y="0" width="860" height="1" fill="#00ff41" opacity="0.15" class="scan-line"/>
+  <rect x="0" y="0" width="860" height="2" fill="#00ff41" opacity="0.5" class="scan-line" filter="url(#glow)"/>
 
-  <!-- Header dots -->
-  <circle cx="30" cy="40" r="4" fill="#ff003c" class="pulse"/>
-  <circle cx="46" cy="40" r="4" fill="#ffe135"/>
-  <circle cx="62" cy="40" r="4" fill="#00ff41"/>
-  <line x1="78" y1="40" x2="844" y2="40" stroke="#00ff4115" stroke-width="1"/>
-  <text x="84" y="44" class="label">/root/Heregaurav/README.md</text>
+  <!-- macOS-style Terminal Dots but Cyber-themed -->
+  <circle cx="35" cy="45" r="5" fill="#ff003c" class="pulse"/>
+  <circle cx="55" cy="45" r="5" fill="#ffe135"/>
+  <circle cx="75" cy="45" r="5" fill="#00ff41"/>
+  <line x1="95" y1="45" x2="840" y2="45" stroke="#00ff41" stroke-width="1" opacity="0.2"/>
+  <text x="105" y="49" class="label">root@localhost:/home/gaurav_kumar</text>
 
-  <!-- TITLE -->
-  <text x="430" y="92" class="title glitch" text-anchor="middle" filter="url(#glow)">GAURAV KUMAR</text>
+  <!-- ==================== HEADER SECTION ==================== -->
+  <text x="430" y="130" class="title glitch" text-anchor="middle" filter="url(#glow)">GAURAV</text>
+  <text x="430" y="165" class="sub" text-anchor="middle">BTECH IN ECE &amp; CYBERSECURITY MINOR @ IIIT DHARWAD </text>
 
-  <!-- Subtitle -->
-  <text x="430" y="114" class="sub" text-anchor="middle">ECE @ IIIT DHARWAD  //  FULL-STACK  //  SECURITY RESEARCHER</text>
+  <line x1="30" y1="200" x2="830" y2="200" stroke="#00ff41" stroke-width="1" opacity="0.15"/>
 
-  <!-- Divider -->
-  <line x1="24" y1="126" x2="836" y2="126" stroke="#00ff4120" stroke-width="1"/>
+  <!-- ==================== TERMINAL PROMPT ==================== -->
+  <text x="40" y="245" class="prompt-cyan">root@gh:~$</text>
+  <text x="125" y="245" class="prompt"> whoami</text>
+  <rect x="195" y="232" width="10" height="16" class="cursor-rect"/>
 
-  <!-- Prompt lines -->
-  <text x="30" y="148" class="prompt-cyan">root@gh:~$</text>
-  <text x="108" y="148" class="prompt"> whoami</text>
-  <rect x="194" y="136" width="8" height="14" class="cursor-rect"/>
+  <!-- Output Lines -->
+  <text x="40" y="285" class="dim">  &gt;  B.Tech student navigating the intersection of Security &amp; Development</text>
+  <text x="40" y="315" class="dim">  &gt;  Passionate about Cybersecurity, Software Development, Networking and AI integrations</text>
+  <text x="40" y="345" class="dim">  &gt;  Mission: Build futuristic, robust architecture. Break it to make it stronger.</text>
 
-  <text x="30" y="168" class="dim">  ↳  3rd Year B.Tech, Electronics &amp; Communication Engineering @ IIIT Dharwad</text>
-  <text x="30" y="185" class="dim">  ↳  Secure systems, deep learning, parallel computing &amp; embedded hardware</text>
-  <text x="30" y="202" class="dim">  ↳  Mission: Build futuristic, unhackable systems. Find how to breach them first.</text>
+  <line x1="30" y1="390" x2="830" y2="390" stroke="#00ff41" stroke-width="1" opacity="0.15"/>
 
-  <!-- Divider -->
-  <line x1="24" y1="216" x2="836" y2="216" stroke="#00ff4215" stroke-width="1"/>
+  <!-- ==================== ARSENAL SECTION ==================== -->
+  <text x="40" y="425" class="label" fill="#00b7ff" filter="url(#glow-sm)">// ACTIVE ARSENAL</text>
 
-  <!-- SKILLS SECTION -->
-  <text x="30" y="234" class="label" fill="#00b7ff">// ARSENAL</text>
+  <!-- Row 1: Offensive Security (Red) -->
+  <g transform="translate(40, 445)">
+    <!-- Burp Suite -->
+    <rect x="0" y="0" width="105" height="24" fill="#ff003c" fill-opacity="0.1" stroke="#ff003c" stroke-opacity="0.4" stroke-width="1" rx="2"/>
+    <circle cx="12" cy="12" r="3" fill="#ff003c" class="pulse"/>
+    <text x="22" y="16" class="tag-text" fill="#ff6b6b">BURP SUITE</text>
+    
+    <!-- Nmap -->
+    <rect x="115" y="0" width="70" height="24" fill="#ff003c" fill-opacity="0.1" stroke="#ff003c" stroke-opacity="0.4" stroke-width="1" rx="2"/>
+    <circle cx="127" cy="12" r="3" fill="#ff003c" class="pulse"/>
+    <text x="137" y="16" class="tag-text" fill="#ff6b6b">NMAP</text>
 
-  <!-- Row 1: Security tags -->
-  <!-- Tag backgrounds -->
-  <!-- Red tags (security) -->
-  <rect x="30" y="241" width="80" height="18" fill="#ff003c10" stroke="#ff003c30" stroke-width="0.5" rx="1"/>
-  <circle cx="42" cy="250" r="3" fill="#ff003c" class="dot-anim"/>
-  <text x="50" y="254" class="tag-text" fill="#ff6b6b">BURP SUITE</text>
+    <!-- Wireshark -->
+    <rect x="195" y="0" width="105" height="24" fill="#ff003c" fill-opacity="0.1" stroke="#ff003c" stroke-opacity="0.4" stroke-width="1" rx="2"/>
+    <circle cx="207" cy="12" r="3" fill="#ff003c" class="pulse"/>
+    <text x="217" y="16" class="tag-text" fill="#ff6b6b">WIRESHARK</text>
 
-  <rect x="118" y="241" width="52" height="18" fill="#ff003c10" stroke="#ff003c30" stroke-width="0.5" rx="1"/>
-  <circle cx="130" cy="250" r="3" fill="#ff003c" class="dot-anim"/>
-  <text x="138" y="254" class="tag-text" fill="#ff6b6b">NMAP</text>
+    <!-- Metasploit -->
+    <rect x="310" y="0" width="110" height="24" fill="#ff003c" fill-opacity="0.1" stroke="#ff003c" stroke-opacity="0.4" stroke-width="1" rx="2"/>
+    <circle cx="322" cy="12" r="3" fill="#ff003c" class="pulse"/>
+    <text x="332" y="16" class="tag-text" fill="#ff6b6b">METASPLOIT</text>
 
-  <rect x="178" y="241" width="76" height="18" fill="#ff003c10" stroke="#ff003c30" stroke-width="0.5" rx="1"/>
-  <circle cx="190" cy="250" r="3" fill="#ff003c" class="dot-anim"/>
-  <text x="198" y="254" class="tag-text" fill="#ff6b6b">WIRESHARK</text>
+    <!-- Linux -->
+    <rect x="430" y="0" width="75" height="24" fill="#ff003c" fill-opacity="0.1" stroke="#ff003c" stroke-opacity="0.4" stroke-width="1" rx="2"/>
+    <circle cx="442" cy="12" r="3" fill="#ff003c" class="pulse"/>
+    <text x="452" y="16" class="tag-text" fill="#ff6b6b">LINUX</text>
+  </g>
 
-  <rect x="262" y="241" width="60" height="18" fill="#ff003c10" stroke="#ff003c30" stroke-width="0.5" rx="1"/>
-  <circle cx="274" cy="250" r="3" fill="#ff003c" class="dot-anim"/>
-  <text x="282" y="254" class="tag-text" fill="#ff6b6b">OWASP</text>
+  <!-- Row 2: Development / Languages (Green) -->
+  <g transform="translate(40, 485)">
+    <!-- C++ -->
+    <rect x="0" y="0" width="55" height="24" fill="#00ff41" fill-opacity="0.08" stroke="#00ff41" stroke-opacity="0.4" stroke-width="1" rx="2"/>
+    <circle cx="12" cy="12" r="3" fill="#00ff41" class="pulse"/>
+    <text x="22" y="16" class="tag-text" fill="#00ff41">C++</text>
+    
+    <!-- Python -->
+    <rect x="65" y="0" width="80" height="24" fill="#00ff41" fill-opacity="0.08" stroke="#00ff41" stroke-opacity="0.4" stroke-width="1" rx="2"/>
+    <circle cx="77" cy="12" r="3" fill="#00ff41" class="pulse"/>
+    <text x="87" y="16" class="tag-text" fill="#00ff41">PYTHON</text>
 
-  <rect x="330" y="241" width="78" height="18" fill="#ff003c10" stroke="#ff003c30" stroke-width="0.5" rx="1"/>
-  <circle cx="342" cy="250" r="3" fill="#ff003c" class="dot-anim"/>
-  <text x="350" y="254" class="tag-text" fill="#ff6b6b">KALI LINUX</text>
+    <!-- React -->
+    <rect x="155" y="0" width="75" height="24" fill="#00ff41" fill-opacity="0.08" stroke="#00ff41" stroke-opacity="0.4" stroke-width="1" rx="2"/>
+    <circle cx="167" cy="12" r="3" fill="#00ff41" class="pulse"/>
+    <text x="177" y="16" class="tag-text" fill="#00ff41">REACT</text>
 
-  <!-- Green tags (languages) -->
-  <rect x="30" y="265" width="36" height="18" fill="#00ff4108" stroke="#00ff4130" stroke-width="0.5" rx="1"/>
-  <circle cx="42" cy="274" r="3" fill="#00ff41" class="dot-anim"/>
-  <text x="50" y="278" class="tag-text" fill="#00ff41">C++</text>
+    <!-- SQL -->
+    <rect x="240" y="0" width="60" height="24" fill="#00ff41" fill-opacity="0.08" stroke="#00ff41" stroke-opacity="0.4" stroke-width="1" rx="2"/>
+    <circle cx="252" cy="12" r="3" fill="#00ff41" class="pulse"/>
+    <text x="262" y="16" class="tag-text" fill="#00ff41">SQL</text>
 
-  <rect x="74" y="265" width="52" height="18" fill="#00ff4108" stroke="#00ff4130" stroke-width="0.5" rx="1"/>
-  <circle cx="86" cy="274" r="3" fill="#00ff41" class="dot-anim"/>
-  <text x="94" y="278" class="tag-text" fill="#00ff41">PYTHON</text>
+    <!-- Node.js -->
+    <rect x="310" y="0" width="90" height="24" fill="#00ff41" fill-opacity="0.08" stroke="#00ff41" stroke-opacity="0.4" stroke-width="1" rx="2"/>
+    <circle cx="322" cy="12" r="3" fill="#00ff41" class="pulse"/>
+    <text x="332" y="16" class="tag-text" fill="#00ff41">NODE.JS</text>
+    
+    <!-- Redis -->
+    <rect x="410" y="0" width="75" height="24" fill="#00ff41" fill-opacity="0.08" stroke="#00ff41" stroke-opacity="0.4" stroke-width="1" rx="2"/>
+    <circle cx="422" cy="12" r="3" fill="#00ff41" class="pulse"/>
+    <text x="432" y="16" class="tag-text" fill="#00ff41">REDIS</text>
+  </g>
 
-  <rect x="134" y="265" width="44" height="18" fill="#00ff4108" stroke="#00ff4130" stroke-width="0.5" rx="1"/>
-  <circle cx="146" cy="274" r="3" fill="#00ff41" class="dot-anim"/>
-  <text x="154" y="278" class="tag-text" fill="#00ff41">CUDA</text>
+  <!-- Row 3: Compute / Hardware / AI (Cyan) -->
+  <g transform="translate(40, 525)">
+    <!-- Docker -->
+    <rect x="0" y="0" width="85" height="24" fill="#00f5ff" fill-opacity="0.08" stroke="#00f5ff" stroke-opacity="0.4" stroke-width="1" rx="2"/>
+    <circle cx="12" cy="12" r="3" fill="#00f5ff" class="pulse"/>
+    <text x="22" y="16" class="tag-text" fill="#00f5ff">DOCKER</text>
 
-  <rect x="186" y="265" width="58" height="18" fill="#00ff4108" stroke="#00ff4130" stroke-width="0.5" rx="1"/>
-  <circle cx="198" cy="274" r="3" fill="#00ff41" class="dot-anim"/>
-  <text x="206" y="278" class="tag-text" fill="#00ff41">OPENMP</text>
+    <!-- Kubernetes -->
+    <rect x="95" y="0" width="115" height="24" fill="#00f5ff" fill-opacity="0.08" stroke="#00f5ff" stroke-opacity="0.4" stroke-width="1" rx="2"/>
+    <circle cx="107" cy="12" r="3" fill="#00f5ff" class="pulse"/>
+    <text x="117" y="16" class="tag-text" fill="#00f5ff">KUBERNETES</text>
 
-  <rect x="252" y="265" width="44" height="18" fill="#00ff4108" stroke="#00ff4130" stroke-width="0.5" rx="1"/>
-  <circle cx="264" cy="274" r="3" fill="#00ff41" class="dot-anim"/>
-  <text x="272" y="278" class="tag-text" fill="#00ff41">REACT</text>
+    <!-- CUDA -->
+    <rect x="220" y="0" width="65" height="24" fill="#00f5ff" fill-opacity="0.08" stroke="#00f5ff" stroke-opacity="0.4" stroke-width="1" rx="2"/>
+    <circle cx="232" cy="12" r="3" fill="#00f5ff" class="pulse"/>
+    <text x="242" y="16" class="tag-text" fill="#00f5ff">CUDA</text>
 
-  <rect x="304" y="265" width="60" height="18" fill="#00ff4108" stroke="#00ff4130" stroke-width="0.5" rx="1"/>
-  <circle cx="316" cy="274" r="3" fill="#00ff41" class="dot-anim"/>
-  <text x="324" y="278" class="tag-text" fill="#00ff41">NODE.JS</text>
+    <!-- AWS -->
+    <rect x="295" y="0" width="65" height="24" fill="#00f5ff" fill-opacity="0.08" stroke="#00f5ff" stroke-opacity="0.4" stroke-width="1" rx="2"/>
+    <circle cx="307" cy="12" r="3" fill="#00f5ff" class="pulse"/>
+    <text x="317" y="16" class="tag-text" fill="#00f5ff">AWS</text>
 
-  <rect x="372" y="265" width="58" height="18" fill="#00ff4108" stroke="#00ff4130" stroke-width="0.5" rx="1"/>
-  <circle cx="384" cy="274" r="3" fill="#00ff41" class="dot-anim"/>
-  <text x="392" y="278" class="tag-text" fill="#00ff41">DOCKER</text>
+    <!-- OpenMP -->
+    <rect x="370" y="0" width="85" height="24" fill="#00f5ff" fill-opacity="0.08" stroke="#00f5ff" stroke-opacity="0.4" stroke-width="1" rx="2"/>
+    <circle cx="382" cy="12" r="3" fill="#00f5ff" class="pulse"/>
+    <text x="392" y="16" class="tag-text" fill="#00f5ff">OPENMP</text>
+    
+    <!-- Arduino -->
+    <rect x="465" y="0" width="90" height="24" fill="#00f5ff" fill-opacity="0.08" stroke="#00f5ff" stroke-opacity="0.4" stroke-width="1" rx="2"/>
+    <circle cx="477" cy="12" r="3" fill="#00f5ff" class="pulse"/>
+    <text x="487" y="16" class="tag-text" fill="#00f5ff">ARDUINO</text>
+  </g>
 
-  <rect x="438" y="265" width="82" height="18" fill="#00ff4108" stroke="#00ff4130" stroke-width="0.5" rx="1"/>
-  <circle cx="450" cy="274" r="3" fill="#00ff41" class="dot-anim"/>
-  <text x="458" y="278" class="tag-text" fill="#00ff41">KUBERNETES</text>
+  <line x1="30" y1="575" x2="830" y2="575" stroke="#00ff41" stroke-width="1" opacity="0.15"/>
 
-  <!-- Cyan tags (compute) -->
-  <rect x="30" y="289" width="44" height="18" fill="#00f5ff08" stroke="#00f5ff30" stroke-width="0.5" rx="1"/>
-  <circle cx="42" cy="298" r="3" fill="#00f5ff" class="dot-anim"/>
-  <text x="50" y="302" class="tag-text" fill="#00f5ff">ESP32</text>
-
-  <rect x="82" y="289" width="64" height="18" fill="#00f5ff08" stroke="#00f5ff30" stroke-width="0.5" rx="1"/>
-  <circle cx="94" cy="298" r="3" fill="#00f5ff" class="dot-anim"/>
-  <text x="102" y="302" class="tag-text" fill="#00f5ff">ARDUINO</text>
-
-  <rect x="154" y="289" width="80" height="18" fill="#00f5ff08" stroke="#00f5ff30" stroke-width="0.5" rx="1"/>
-  <circle cx="166" cy="298" r="3" fill="#00f5ff" class="dot-anim"/>
-  <text x="174" y="302" class="tag-text" fill="#00f5ff">OPENACC</text>
-
-  <rect x="242" y="289" width="102" height="18" fill="#00f5ff08" stroke="#00f5ff30" stroke-width="0.5" rx="1"/>
-  <circle cx="254" cy="298" r="3" fill="#00f5ff" class="dot-anim"/>
-  <text x="262" y="302" class="tag-text" fill="#00f5ff">DEEP LEARNING</text>
-
-  <!-- Divider -->
-  <line x1="24" y1="316" x2="836" y2="316" stroke="#00ff4215" stroke-width="1"/>
-
-  <!-- Bottom status bar -->
-  <text x="30" y="334" class="status">[ STATUS: ONLINE ]</text>
-  <text x="175" y="334" class="status">[ MODE: LEARNING ]</text>
-  <text x="320" y="334" class="status">[ VPN: ACTIVE ]</text>
-  <text x="440" y="334" class="status">[ TRACE: NONE ]</text>
-  <text x="575" y="334" class="status">[ THREAT LEVEL: HIGH ]</text>
+  <!-- ==================== FOOTER ==================== -->
+  <text x="40" y="605" class="status">[ STATUS: ONLINE ]</text>
+  <text x="200" y="605" class="status">[ MODE: ENGINEERING ]</text>
+  <text x="375" y="605" class="status">[ PROXY: ACTIVE ]</text>
+  <text x="530" y="605" class="status">[ THREAT LEVEL: HIGH ]</text>
 
   <!-- Quote -->
-  <line x1="30" y1="344" x2="30" y2="364" stroke="#00ff41" stroke-width="1.5" filter="url(#glow-sm)"/>
-  <text x="42" y="354" class="dim">"Think like an attacker. Build like a defender."</text>
-  <text x="42" y="367" class="status">— Gaurav Kumar</text>
-
+  <line x1="40" y1="615" x2="40" y2="635" stroke="#00ff41" stroke-width="2" filter="url(#glow-sm)"/>
+  <text x="55" y="625" class="dim" font-style="italic">"Think like an attacker. Build like a defender."</text>
+  <text x="55" y="640" class="status">— Gaurav Kumar</text>
 </svg>
