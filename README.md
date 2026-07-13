@@ -35,7 +35,7 @@
 <div align="center">
   <div style="max-width: 600px; border: 1px solid #FFCF8A; background: #10122A; font-family: 'Share Tech Mono', monospace; border-radius: 4px; overflow: hidden; box-shadow: 0 0 12px rgba(255, 207, 138, 0.15);">
     <div style="background: rgba(255, 207, 138, 0.08); border-bottom: 1px solid rgba(255, 207, 138, 0.3); padding: 6px 12px; text-align: left; font-size: 11px; color: #FFCF8A; letter-spacing: 2px;">
-      ☾ gyan : 
+    Quote : 
     </div>
     <div style="padding: 24px; text-align: center;">
       <p style="color: #F3EAD1; font-size: 15px; margin: 0 0 12px 0; letter-spacing: 0.5px; line-height: 1.5;">
