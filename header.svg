@@ -1,166 +1,137 @@
 <svg viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#040b04"/>
-      <stop offset="100%" stop-color="#081a0c"/>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#05060f"/>
+      <stop offset="55%" stop-color="#10122a"/>
+      <stop offset="100%" stop-color="#221a33"/>
     </linearGradient>
 
-    <linearGradient id="rim" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#ffb347" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#ffb347" stop-opacity="0.35"/>
-      <stop offset="100%" stop-color="#ffb347" stop-opacity="0"/>
-    </linearGradient>
+    <radialGradient id="moonGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f6ecd2" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#f6ecd2" stop-opacity="0"/>
+    </radialGradient>
 
-    <linearGradient id="screenGlow" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#00ff9d" stop-opacity="0.35"/>
-      <stop offset="100%" stop-color="#00ff41" stop-opacity="0.08"/>
-    </linearGradient>
-
-    <radialGradient id="lampGlow" cx="50%" cy="0%" r="70%">
-      <stop offset="0%" stop-color="#ffcf8a" stop-opacity="0.5"/>
+    <radialGradient id="lampGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffcf8a" stop-opacity="0.55"/>
       <stop offset="100%" stop-color="#ffcf8a" stop-opacity="0"/>
     </radialGradient>
 
-    <radialGradient id="figureRim" cx="30%" cy="40%" r="70%">
-      <stop offset="0%" stop-color="#ff7a30" stop-opacity="0.25"/>
-      <stop offset="100%" stop-color="#ff7a30" stop-opacity="0"/>
-    </radialGradient>
+    <linearGradient id="farHills" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1b2040"/>
+      <stop offset="100%" stop-color="#171b36"/>
+    </linearGradient>
+
+    <linearGradient id="midHills" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#12142c"/>
+      <stop offset="100%" stop-color="#0e0f22"/>
+    </linearGradient>
 
     <filter id="blurSoft" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="14"/>
+      <feGaussianBlur stdDeviation="10"/>
     </filter>
-    <filter id="blurTiny" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="3"/>
+    <filter id="blurMist" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="18"/>
     </filter>
   </defs>
 
-  <!-- background -->
-  <rect x="0" y="0" width="1200" height="400" fill="url(#bg)"/>
+  <!-- sky -->
+  <rect x="0" y="0" width="1200" height="400" fill="url(#sky)"/>
 
-  <!-- faint matrix rain, far left, calm/low opacity -->
-  <g font-family="monospace" font-size="13" fill="#00ff41" opacity="0.14">
-    <text x="30" y="40">01</text><text x="30" y="60">10</text><text x="30" y="80">11</text>
-    <text x="30" y="100">00</text><text x="30" y="120">10</text><text x="30" y="140">01</text>
-    <text x="60" y="70">λ</text><text x="60" y="95">#</text><text x="60" y="130">$</text>
-    <text x="60" y="160">/&gt;</text><text x="30" y="170">11</text><text x="30" y="200">00</text>
-    <text x="60" y="200">01</text><text x="30" y="230">λ</text><text x="60" y="240">10</text>
+  <!-- stars, slow twinkle -->
+  <g fill="#f6ecd2">
+    <circle cx="80" cy="50" r="1.4" opacity="0.6"><animate attributeName="opacity" values="0.6;0.15;0.6" dur="5s" repeatCount="indefinite"/></circle>
+    <circle cx="150" cy="90" r="1" opacity="0.4"><animate attributeName="opacity" values="0.4;0.1;0.4" dur="6.5s" repeatCount="indefinite"/></circle>
+    <circle cx="230" cy="40" r="1.6" opacity="0.7"><animate attributeName="opacity" values="0.7;0.2;0.7" dur="4.5s" repeatCount="indefinite"/></circle>
+    <circle cx="320" cy="70" r="1.1" opacity="0.5"><animate attributeName="opacity" values="0.5;0.15;0.5" dur="7s" repeatCount="indefinite"/></circle>
+    <circle cx="410" cy="35" r="1.3" opacity="0.6"><animate attributeName="opacity" values="0.6;0.2;0.6" dur="5.5s" repeatCount="indefinite"/></circle>
+    <circle cx="470" cy="95" r="1" opacity="0.45"><animate attributeName="opacity" values="0.45;0.1;0.45" dur="6s" repeatCount="indefinite"/></circle>
+    <circle cx="560" cy="55" r="1.4" opacity="0.55"><animate attributeName="opacity" values="0.55;0.15;0.55" dur="8s" repeatCount="indefinite"/></circle>
+    <circle cx="650" cy="30" r="1" opacity="0.4"><animate attributeName="opacity" values="0.4;0.1;0.4" dur="5s" repeatCount="indefinite"/></circle>
+    <circle cx="120" cy="140" r="1" opacity="0.35"><animate attributeName="opacity" values="0.35;0.08;0.35" dur="7.5s" repeatCount="indefinite"/></circle>
+    <circle cx="260" cy="130" r="0.9" opacity="0.3"><animate attributeName="opacity" values="0.3;0.08;0.3" dur="6.8s" repeatCount="indefinite"/></circle>
+    <circle cx="700" cy="60" r="1.2" opacity="0.5"><animate attributeName="opacity" values="0.5;0.15;0.5" dur="6.2s" repeatCount="indefinite"/></circle>
+    <circle cx="60" cy="110" r="1.1" opacity="0.4"><animate attributeName="opacity" values="0.4;0.1;0.4" dur="7.2s" repeatCount="indefinite"/></circle>
   </g>
 
-  <!-- warm rim-light column (echoes the reference photo's window glow) -->
-  <rect x="60" y="0" width="140" height="400" fill="url(#rim)"/>
+  <!-- moon -->
+  <circle cx="980" cy="85" r="85" fill="url(#moonGlow)" filter="url(#blurSoft)"/>
+  <circle cx="980" cy="85" r="34" fill="#f3ead1"/>
+  <circle cx="992" cy="72" r="5" fill="#e6dcc0" opacity="0.5"/>
+  <circle cx="970" cy="98" r="3.5" fill="#e6dcc0" opacity="0.4"/>
+  <circle cx="988" cy="100" r="2.5" fill="#e6dcc0" opacity="0.4"/>
 
-  <!-- desk lamp, top right -->
-  <ellipse cx="1040" cy="10" rx="140" ry="90" fill="url(#lampGlow)" filter="url(#blurSoft)"/>
-  <path d="M 990 -20 Q 1040 40 1090 -20 L 1080 55 Q 1040 75 1000 55 Z" fill="#0d1410"/>
-  <rect x="1035" y="55" width="10" height="20" fill="#0d1410"/>
+  <!-- far hills -->
+  <path d="M0,260 Q120,230 240,250 T480,240 T720,255 T960,235 T1200,250 L1200,400 L0,400 Z" fill="url(#farHills)"/>
 
-  <!-- monitor stack -->
+  <!-- mid hills with the Great Wall along the ridge -->
+  <path d="M0,300 Q150,265 300,285 T600,270 T900,290 T1200,275 L1200,400 L0,400 Z" fill="url(#midHills)"/>
+
+  <!-- wall line following the mid ridge, simple crenellations -->
+  <g stroke="#2a2e4c" stroke-width="3" fill="none" opacity="0.8">
+    <path d="M20,296 Q150,262 300,282 T600,267 T900,287 T1180,273"/>
+  </g>
+  <g fill="#20233d" opacity="0.85">
+    <rect x="140" y="255" width="6" height="10"/>
+    <rect x="160" y="253" width="6" height="10"/>
+    <rect x="180" y="252" width="6" height="10"/>
+    <rect x="380" y="256" width="6" height="10"/>
+    <rect x="400" y="255" width="6" height="10"/>
+    <rect x="420" y="255" width="6" height="10"/>
+    <rect x="680" y="253" width="6" height="10"/>
+    <rect x="700" y="252" width="6" height="10"/>
+    <rect x="720" y="253" width="6" height="10"/>
+  </g>
+  <!-- watchtowers -->
+  <g fill="#1c1f38">
+    <path d="M255,283 L255,262 L266,255 L277,262 L277,283 Z"/>
+    <path d="M545,270 L545,250 L556,243 L567,250 L567,270 Z"/>
+    <path d="M845,272 L845,252 L856,245 L867,252 L867,272 Z"/>
+  </g>
+
+  <!-- drifting mist, very slow -->
+  <g fill="#c9d4f0" opacity="0.06" filter="url(#blurMist)">
+    <ellipse cx="300" cy="310" rx="260" ry="30">
+      <animate attributeName="cx" values="300;420;300" dur="34s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="850" cy="300" rx="300" ry="26">
+      <animate attributeName="cx" values="850;700;850" dur="40s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+
+  <!-- foreground terrace -->
+  <path d="M0,400 L0,340 Q300,320 600,332 T1200,325 L1200,400 Z" fill="#05060d"/>
+
+  <!-- coder figure, simple silhouette, sitting cross-legged with a laptop -->
+  <g fill="#03040a">
+    <!-- body / shoulders wrapped like a light blanket -->
+    <path d="M150,400 Q145,345 195,335 Q225,330 250,340 Q285,352 288,400 Z"/>
+    <!-- head -->
+    <circle cx="212" cy="318" r="20"/>
+    <!-- small knot of hair -->
+    <path d="M196,304 Q206,292 222,298 Q228,302 224,310 Q210,300 196,304 Z"/>
+    <!-- crossed legs, low simple shape -->
+    <path d="M160,400 Q170,378 220,378 Q270,378 282,400 Z"/>
+    <!-- laptop, open, resting on lap -->
+    <path d="M180,372 L246,372 L238,388 L188,388 Z" fill="#05070f"/>
+    <rect x="186" y="356" width="56" height="18" rx="2" fill="#05070f"/>
+  </g>
+  <!-- laptop screen glow -->
+  <rect x="189" y="359" width="50" height="12" rx="1" fill="#bfe3ff" opacity="0.55">
+    <animate attributeName="opacity" values="0.55;0.4;0.55" dur="4s" repeatCount="indefinite"/>
+  </rect>
+  <ellipse cx="214" cy="365" rx="70" ry="45" fill="url(#lampGlow)" filter="url(#blurSoft)" opacity="0.5"/>
+
+  <!-- tea cup with slow rising steam -->
   <g>
-    <!-- top monitor -->
-    <rect x="640" y="70" width="330" height="210" rx="10" fill="#08130c" stroke="#0f2a18" stroke-width="2"/>
-    <rect x="655" y="85" width="300" height="180" rx="4" fill="url(#screenGlow)"/>
-    <!-- code lines on top monitor -->
-    <g fill="#00ff41" opacity="0.55">
-      <rect x="670" y="100" width="90" height="6" rx="2"/>
-      <rect x="670" y="116" width="140" height="6" rx="2"/>
-      <rect x="690" y="132" width="110" height="6" rx="2"/>
-      <rect x="670" y="148" width="60" height="6" rx="2"/>
-      <rect x="690" y="164" width="150" height="6" rx="2"/>
-      <rect x="670" y="180" width="100" height="6" rx="2"/>
-      <rect x="690" y="196" width="80" height="6" rx="2"/>
+    <path d="M320,392 L352,392 L348,404 L324,404 Z" fill="#03040a"/>
+    <ellipse cx="336" cy="392" rx="16" ry="3" fill="#0a0c18"/>
+    <g stroke="#e8ecf5" stroke-width="1.6" fill="none" opacity="0.35" stroke-linecap="round">
+      <path d="M330,388 Q326,376 332,368 Q338,360 333,350">
+        <animate attributeName="opacity" values="0.35;0.05;0.35" dur="5s" repeatCount="indefinite"/>
+      </path>
+      <path d="M342,388 Q346,378 340,368 Q334,358 340,348">
+        <animate attributeName="opacity" values="0.3;0.05;0.3" dur="6s" repeatCount="indefinite"/>
+      </path>
     </g>
-    <!-- blinking cursor -->
-    <rect x="795" y="196" width="8" height="6" fill="#00ff41">
-      <animate attributeName="opacity" values="1;0;1" dur="1.1s" repeatCount="indefinite"/>
-    </rect>
-    <rect x="790" y="285" width="20" height="25" fill="#0f2a18"/>
-    <rect x="720" y="308" width="140" height="8" rx="4" fill="#0f2a18"/>
-
-    <!-- bottom wide monitor -->
-    <rect x="560" y="230" width="560" height="150" rx="10" fill="#08130c" stroke="#0f2a18" stroke-width="2"/>
-    <rect x="575" y="245" width="260" height="120" rx="4" fill="url(#screenGlow)" opacity="0.9"/>
-    <rect x="845" y="245" width="260" height="120" rx="4" fill="url(#screenGlow)" opacity="0.7"/>
-    <g fill="#00ff41" opacity="0.45">
-      <rect x="590" y="260" width="120" height="5" rx="2"/>
-      <rect x="590" y="274" width="80" height="5" rx="2"/>
-      <rect x="590" y="288" width="150" height="5" rx="2"/>
-      <rect x="590" y="302" width="100" height="5" rx="2"/>
-      <rect x="860" y="260" width="130" height="5" rx="2"/>
-      <rect x="860" y="274" width="90" height="5" rx="2"/>
-      <rect x="860" y="288" width="160" height="5" rx="2"/>
-    </g>
-  </g>
-
-  <!-- desk surface -->
-  <rect x="0" y="360" width="1200" height="40" fill="#050c06"/>
-  <rect x="0" y="360" width="1200" height="3" fill="#0f2a18" opacity="0.6"/>
-
-  <!-- keyboard -->
-  <rect x="430" y="340" width="150" height="30" rx="4" fill="#0a1a0d" stroke="#0f2a18"/>
-  <g fill="#173a20">
-    <rect x="440" y="347" width="10" height="8" rx="1"/>
-    <rect x="454" y="347" width="10" height="8" rx="1"/>
-    <rect x="468" y="347" width="10" height="8" rx="1"/>
-    <rect x="482" y="347" width="10" height="8" rx="1"/>
-    <rect x="440" y="358" width="130" height="8" rx="2"/>
-  </g>
-
-  <!-- coder silhouette, calm side-profile, own screen light on face -->
-  <g fill="#050705">
-    <!-- hoodie body -->
-    <path d="M 120 400 L 120 300 Q 130 250 190 235 Q 230 225 270 235 Q 330 250 350 300 Q 360 330 355 400 Z"/>
-    <!-- hood at back of neck -->
-    <path d="M 150 260 Q 140 230 175 210 Q 200 200 210 220 Q 190 235 175 260 Z" opacity="0.95"/>
-    <!-- arm reaching to keyboard -->
-    <path d="M 300 300 Q 360 305 410 330 Q 450 345 470 350 L 465 368 Q 420 360 370 345 Q 320 330 290 320 Z"/>
-    <!-- neck -->
-    <path d="M 235 210 L 250 210 L 252 240 L 233 240 Z"/>
-    <!-- head, profile facing right toward the screens -->
-    <path d="M 205 210
-             Q 195 160 235 130
-             Q 275 105 305 130
-             Q 320 145 315 165
-             Q 335 170 330 185
-             Q 325 195 312 195
-             Q 315 215 300 228
-             Q 280 245 255 235
-             Q 220 228 210 210 Z"/>
-    <!-- hair, gentle spikes -->
-    <path d="M 200 165
-             Q 195 120 240 100
-             Q 270 88 300 100
-             Q 330 112 328 140
-             Q 320 125 305 132
-             Q 300 115 285 118
-             Q 282 105 265 110
-             Q 255 100 245 112
-             Q 230 105 222 122
-             Q 205 130 205 165 Z"/>
-    <!-- ear -->
-    <path d="M 213 175 Q 205 178 206 190 Q 208 198 216 195 Z"/>
-  </g>
-  <!-- glasses, thin line, catching screen light -->
-  <g stroke="#0d2a16" stroke-width="3" fill="none" opacity="0.9">
-    <ellipse cx="283" cy="172" rx="20" ry="14"/>
-    <path d="M 303 170 L 312 168"/>
-  </g>
-
-  <!-- warm rim light on the figure's edge, subtle -->
-  <ellipse cx="230" cy="260" rx="170" ry="170" fill="url(#figureRim)" filter="url(#blurSoft)"/>
-
-  <!-- ambient floating particles -->
-  <g fill="#00ff41">
-    <circle cx="500" cy="90" r="2.5" opacity="0.5">
-      <animate attributeName="cy" values="90;70;90" dur="6s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="560" cy="150" r="2" opacity="0.35">
-      <animate attributeName="cy" values="150;125;150" dur="7.5s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="1000" cy="120" r="2" opacity="0.3">
-      <animate attributeName="cy" values="120;100;120" dur="8s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="950" cy="330" r="2" opacity="0.25">
-      <animate attributeName="cy" values="330;310;330" dur="6.5s" repeatCount="indefinite"/>
-    </circle>
   </g>
 </svg>
