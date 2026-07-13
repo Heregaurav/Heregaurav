@@ -1,6 +1,6 @@
 ## `THE ACCESS POINT`
 <div align="center">
-  <img src="./peaceful-banner.svg" alt="Header" width="100%"/>
+  <img src="./header.svg" alt="Header" width="100%"/>
 </div>
 
 ---
