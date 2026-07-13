@@ -1,331 +1,166 @@
-<svg width="860" height="820" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&amp;family=Orbitron:wght@700;900');
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#040b04"/>
+      <stop offset="100%" stop-color="#081a0c"/>
+    </linearGradient>
 
-      .bg { fill: #050e06; }
-      .grid { fill: url(#gridPattern); opacity: 0.4; }
-      .window-border-bg { fill: #00ff41; opacity: 0.01; }
-      .window-border-line { fill: none; stroke: #00ff41; stroke-width: 1; opacity: 0.2; }
-      
-      /* Web aesthetics */
-      .main-structure-border { fill: none; stroke: #00ff41; stroke-width: 1; opacity: 0.12; stroke-dasharray: 10 25; }
-      .spider-web-line { fill: none; stroke: #00ff41; stroke-width: 0.75; opacity: 0.08; }
-      .crumbled-cobweb { fill: none; stroke: #00ff41; stroke-width: 0.5; opacity: 0.15; }
-      .crumbled-thick { fill: none; stroke: #00ff41; stroke-width: 1.2; opacity: 0.25; }
-      
-      /* Realistic Spider styling */
-      .spider-body { fill: #081409; stroke: #00ff41; stroke-width: 1; }
-      .spider-marking { fill: #00ff41; opacity: 0.7; }
-      .spider-leg { fill: none; stroke: #00ff41; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
-      .spider-silk { fill: none; stroke: #00ff41; stroke-width: 0.75; opacity: 0.6; }
+    <linearGradient id="rim" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffb347" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ffb347" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ffb347" stop-opacity="0"/>
+    </linearGradient>
 
-      .title {
-        font-family: 'Orbitron', 'Courier New', monospace;
-        font-size: 38px;
-        font-weight: 900;
-        fill: #00ff41;
-        letter-spacing: 6px;
-      }
-      .sub {
-        font-family: 'Share Tech Mono', 'Courier New', monospace;
-        font-size: 14px;
-        fill: #00cc33;
-        letter-spacing: 3px;
-      }
-      .prompt-cyan {
-        font-family: 'Share Tech Mono', 'Courier New', monospace;
-        font-size: 15px;
-        fill: #00f5ff;
-        font-weight: bold;
-      }
-      .prompt {
-        font-family: 'Share Tech Mono', 'Courier New', monospace;
-        font-size: 15px;
-        fill: #00ff41;
-      }
-      .dim {
-        font-family: 'Share Tech Mono', 'Courier New', monospace;
-        font-size: 14px;
-        fill: #00aa33;
-        letter-spacing: 0.5px;
-      }
-      .label {
-        font-family: 'Share Tech Mono', 'Courier New', monospace;
-        font-size: 12px;
-        fill: #00aa22;
-        letter-spacing: 2px;
-      }
-      .status {
-        font-family: 'Share Tech Mono', 'Courier New', monospace;
-        font-size: 11px;
-        fill: #00771a;
-        letter-spacing: 1.5px;
-      }
-      .tag-text {
-        font-family: 'Share Tech Mono', 'Courier New', monospace;
-        font-size: 11px;
-        letter-spacing: 1.5px;
-        font-weight: bold;
-      }
-      .cursor-rect {
-        fill: #00ff41;
-        animation: blink 1s step-end infinite;
-      }
-      .glitch {
-        animation: glitch 5s infinite;
-      }
-      .scan-line {
-        animation: scan 3s linear infinite;
-      }
-      
-      @keyframes blink {
-        0%, 100% { opacity: 1; }
-        50% { opacity: 0; }
-      }
-      @keyframes glitch {
-        0%, 88%, 100% { transform: none; }
-        90% { transform: translateX(-2px); filter: drop-shadow(3px 0 #ff003c); }
-        91% { transform: translateX(2px); filter: drop-shadow(-3px 0 #00f5ff); }
-        92% { transform: none; }
-      }
-      @keyframes scan {
-        0% { transform: translateY(-100px); }
-        100% { transform: translateY(920px); }
-      }
-      .pulse {
-        animation: pulse 2s ease-in-out infinite;
-      }
-      @keyframes pulse {
-        0%, 100% { opacity: 0.4; }
-        50% { opacity: 1; }
-      }
-    </style>
+    <linearGradient id="screenGlow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#00ff9d" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#00ff41" stop-opacity="0.08"/>
+    </linearGradient>
 
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-      <feMerge>
-        <feMergeNode in="coloredBlur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
+    <radialGradient id="lampGlow" cx="50%" cy="0%" r="70%">
+      <stop offset="0%" stop-color="#ffcf8a" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#ffcf8a" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="figureRim" cx="30%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#ff7a30" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#ff7a30" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="blurSoft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="14"/>
     </filter>
-    <filter id="glow-sm">
-      <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
-      <feMerge>
-        <feMergeNode in="coloredBlur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
+    <filter id="blurTiny" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3"/>
     </filter>
-
-    <pattern id="gridPattern" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#00ff41" stroke-width="0.75" opacity="0.12"/>
-    </pattern>
-    
-    <pattern id="scanlines" width="4" height="4" patternUnits="userSpaceOnUse">
-      <rect width="4" height="2" fill="#000000" opacity="0.35"/>
-    </pattern>
   </defs>
 
-  <rect width="860" height="820" class="bg"/>
-  
-  <rect width="860" height="820" class="grid"/>
-  
-  <rect x="25" y="25" width="810" height="770" class="main-structure-border" rx="2"/>
+  <!-- background -->
+  <rect x="0" y="0" width="1200" height="400" fill="url(#bg)"/>
 
-  <g class="spider-web-line" filter="url(#glow-sm)">
-    <path d="M 40 40 L 820 600" />
-    <path d="M 40 40 L 500 700" />
-    <path d="M 40 40 L 820 250" />
-    <path d="M 40 40 L 250 700" />
-    <path d="M 40 40 L 820 40" />
-    <path d="M 40 40 L 40 700" />
-    
-    <path d="M 140 40 C 130 80, 110 100, 40 110" />
-    <path d="M 240 40 C 220 130, 170 170, 40 190" />
-    <path d="M 240 40 C 290 80, 360 100, 440 110" />
-    <path d="M 390 40 C 350 180, 250 260, 40 310" />
-    <path d="M 390 40 C 480 100, 600 150, 700 180" />
-    <path d="M 590 40 C 510 260, 380 390, 40 460" />
-    <path d="M 590 40 C 670 130, 750 240, 820 310" />
+  <!-- faint matrix rain, far left, calm/low opacity -->
+  <g font-family="monospace" font-size="13" fill="#00ff41" opacity="0.14">
+    <text x="30" y="40">01</text><text x="30" y="60">10</text><text x="30" y="80">11</text>
+    <text x="30" y="100">00</text><text x="30" y="120">10</text><text x="30" y="140">01</text>
+    <text x="60" y="70">λ</text><text x="60" y="95">#</text><text x="60" y="130">$</text>
+    <text x="60" y="160">/&gt;</text><text x="30" y="170">11</text><text x="30" y="200">00</text>
+    <text x="60" y="200">01</text><text x="30" y="230">λ</text><text x="60" y="240">10</text>
   </g>
 
-  <g filter="url(#glow-sm)">
-    <path d="M25 25 L45 80 L28 110 L70 60 L120 35 L80 25 Z" class="crumbled-thick" />
-    <path d="M25 50 Q55 60 75 25 M25 90 Q40 80 110 25 M30 130 Q80 100 160 25" class="crumbled-cobweb" />
-    <path d="M35 35 L50 70 M45 30 L85 55 M60 25 L105 45" class="crumbled-cobweb" />
-    
-    <path d="M835 25 L815 90 L790 45 L740 30 L780 25 Z" class="crumbled-thick" />
-    <path d="M835 60 Q790 75 770 25 M835 110 Q770 90 710 25 M800 140 Q740 100 660 25" class="crumbled-cobweb" />
-    <path d="M800 35 L760 75 M745 40 L810 65" class="crumbled-cobweb" />
+  <!-- warm rim-light column (echoes the reference photo's window glow) -->
+  <rect x="60" y="0" width="140" height="400" fill="url(#rim)"/>
 
-    <path d="M25 240 Q65 260 25 290 M25 210 Q85 250 25 320 M25 450 Q50 470 25 500" class="crumbled-cobweb" />
-    <path d="M25 230 L55 265 M25 275 L45 250" class="crumbled-cobweb" />
+  <!-- desk lamp, top right -->
+  <ellipse cx="1040" cy="10" rx="140" ry="90" fill="url(#lampGlow)" filter="url(#blurSoft)"/>
+  <path d="M 990 -20 Q 1040 40 1090 -20 L 1080 55 Q 1040 75 1000 55 Z" fill="#0d1410"/>
+  <rect x="1035" y="55" width="10" height="20" fill="#0d1410"/>
 
-    <path d="M835 400 Q790 420 835 450 M835 370 Q770 415 835 480" class="crumbled-cobweb" />
-    
-    <path d="M25 795 L90 760 L45 730 L25 710 Z" class="crumbled-thick" />
-    <path d="M25 750 Q60 750 110 795 M25 710 Q80 720 160 795" class="crumbled-cobweb" />
-    <path d="M835 795 L750 770 L790 730 L835 700 Z" class="crumbled-thick" />
-    <path d="M835 740 Q760 750 720 795 M835 700 Q740 710 650 795" class="crumbled-cobweb" />
-  </g>
+  <!-- monitor stack -->
+  <g>
+    <!-- top monitor -->
+    <rect x="640" y="70" width="330" height="210" rx="10" fill="#08130c" stroke="#0f2a18" stroke-width="2"/>
+    <rect x="655" y="85" width="300" height="180" rx="4" fill="url(#screenGlow)"/>
+    <!-- code lines on top monitor -->
+    <g fill="#00ff41" opacity="0.55">
+      <rect x="670" y="100" width="90" height="6" rx="2"/>
+      <rect x="670" y="116" width="140" height="6" rx="2"/>
+      <rect x="690" y="132" width="110" height="6" rx="2"/>
+      <rect x="670" y="148" width="60" height="6" rx="2"/>
+      <rect x="690" y="164" width="150" height="6" rx="2"/>
+      <rect x="670" y="180" width="100" height="6" rx="2"/>
+      <rect x="690" y="196" width="80" height="6" rx="2"/>
+    </g>
+    <!-- blinking cursor -->
+    <rect x="795" y="196" width="8" height="6" fill="#00ff41">
+      <animate attributeName="opacity" values="1;0;1" dur="1.1s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="790" y="285" width="20" height="25" fill="#0f2a18"/>
+    <rect x="720" y="308" width="140" height="8" rx="4" fill="#0f2a18"/>
 
-  <rect x="40" y="40" width="780" height="680" class="window-border-bg" rx="4"/>
-  <rect x="40" y="40" width="780" height="680" class="window-border-line" rx="4"/>
-
-  <rect x="60" y="28" width="220" height="18" fill="#050e06" stroke="#00ff41" stroke-width="1" opacity="0.8"/>
-  <text x="70" y="41" class="label" fill="#00ff41">[ README.md ] — DECRYPTED</text>
-
-  <circle cx="70" cy="73" r="5" fill="#ff003c" class="pulse"/>
-  <circle cx="90" cy="73" r="5" fill="#ffe135"/>
-  <circle cx="110" cy="73" r="5" fill="#00ff41"/>
-  <line x1="130" y1="73" x2="800" y2="73" stroke="#00ff41" stroke-width="1" opacity="0.2"/>
-  <text x="140" y="77" class="label">root@localhost:/home/gaurav_kumar</text>
-
-  <g filter="url(#glow-sm)">
-    <animateTransform 
-      attributeName="transform" 
-      type="translate" 
-      values="0,-400; 0,470; 0,470; 0,-400" 
-      keyTimes="0; 0.25; 0.75; 1" 
-      dur="14s" 
-      repeatCount="indefinite" 
-      calcMode="spline" 
-      keySplines="0.42, 0, 0.58, 1; 0, 0, 1, 1; 0.42, 0, 0.58, 1" />
-
-    <line x1="95" y1="-200" x2="95" y2="245" class="spider-silk" stroke-width="0.75" />
-    
-    <g transform="translate(70, 240)">
-      <path d="M 25 25 Q 10 -5, -5 0 Q -5 0, -2 15" class="spider-leg"/> 
-      <path d="M 25 27 Q 5 0, -8 15 Q -8 15, -4 28" class="spider-leg"/>  
-      <path d="M 25 31 Q 8 20, -5 35 Q -5 35, 0 45" class="spider-leg"/>   
-      <path d="M 25 35 Q 12 45, -2 55 Q -2 55, 5 68" class="spider-leg"/>   
-
-      <path d="M 25 25 Q 40 -5, 55 0 Q 55 0, 52 15" class="spider-leg"/>  
-      <path d="M 25 27 Q 45 0, 58 15 Q 58 15, 54 28" class="spider-leg"/>   
-      <path d="M 25 31 Q 42 20, 55 35 Q 55 35, 50 45" class="spider-leg"/>  
-      <path d="M 25 35 Q 38 45, 52 55 Q 52 55, 45 68" class="spider-leg"/>  
-      
-      <path d="M 22 14 Q 18 2, 14 5" class="spider-leg" stroke-width="1"/>
-      <path d="M 28 14 Q 32 2, 36 5" class="spider-leg" stroke-width="1"/>
-
-      <ellipse cx="25" cy="22" rx="5" ry="6" class="spider-body"/>
-      <ellipse cx="25" cy="36" rx="8" ry="11" class="spider-body"/>
-      <ellipse cx="25" cy="33" rx="2" ry="4" class="spider-marking"/>
-      <path d="M 21 40 Q 25 42, 29 40" fill="none" stroke="#00ff41" stroke-width="1" class="spider-marking"/>
+    <!-- bottom wide monitor -->
+    <rect x="560" y="230" width="560" height="150" rx="10" fill="#08130c" stroke="#0f2a18" stroke-width="2"/>
+    <rect x="575" y="245" width="260" height="120" rx="4" fill="url(#screenGlow)" opacity="0.9"/>
+    <rect x="845" y="245" width="260" height="120" rx="4" fill="url(#screenGlow)" opacity="0.7"/>
+    <g fill="#00ff41" opacity="0.45">
+      <rect x="590" y="260" width="120" height="5" rx="2"/>
+      <rect x="590" y="274" width="80" height="5" rx="2"/>
+      <rect x="590" y="288" width="150" height="5" rx="2"/>
+      <rect x="590" y="302" width="100" height="5" rx="2"/>
+      <rect x="860" y="260" width="130" height="5" rx="2"/>
+      <rect x="860" y="274" width="90" height="5" rx="2"/>
+      <rect x="860" y="288" width="160" height="5" rx="2"/>
     </g>
   </g>
 
-  <text x="450" y="150" class="title glitch" text-anchor="middle" filter="url(#glow)">GAURAV</text>
-  <text x="450" y="190" class="sub" text-anchor="middle">BTECH IN ECE &amp; CYBERSECURITY MINOR @ IIIT DHARWAD</text>
+  <!-- desk surface -->
+  <rect x="0" y="360" width="1200" height="40" fill="#050c06"/>
+  <rect x="0" y="360" width="1200" height="3" fill="#0f2a18" opacity="0.6"/>
 
-  <line x1="60" y1="230" x2="800" y2="230" stroke="#00ff41" stroke-width="1" opacity="0.15"/>
-
-  <text x="120" y="280" class="prompt-cyan">root@gh:~$</text>
-  <text x="205" y="280" class="prompt"> whoami</text>
-  <rect x="275" y="267" width="10" height="16" class="cursor-rect"/>
-
-  <g transform="translate(50, 30)">
-    <text x="70" y="300" class="dim">  &gt;  B.Tech student navigating the intersection of Security &amp; Development</text>
-    <text x="70" y="335" class="dim">  &gt;  Passionate about Cybersecurity, Software Development, Networking and AI </text>
-    <text x="70" y="370" class="dim">  &gt;  Mission: Build futuristic, robust architecture. Break it to make it stronger</text>
+  <!-- keyboard -->
+  <rect x="430" y="340" width="150" height="30" rx="4" fill="#0a1a0d" stroke="#0f2a18"/>
+  <g fill="#173a20">
+    <rect x="440" y="347" width="10" height="8" rx="1"/>
+    <rect x="454" y="347" width="10" height="8" rx="1"/>
+    <rect x="468" y="347" width="10" height="8" rx="1"/>
+    <rect x="482" y="347" width="10" height="8" rx="1"/>
+    <rect x="440" y="358" width="130" height="8" rx="2"/>
   </g>
 
-  <line x1="60" y1="450" x2="800" y2="450" stroke="#00ff41" stroke-width="1" opacity="0.15"/>
-
-  <text x="70" y="490" class="label" fill="#00b7ff" filter="url(#glow-sm)">// ACTIVE ARSENAL</text>
-
-  <g transform="translate(70, 510)">
-    <rect x="0" y="0" width="105" height="24" fill="#ff003c" fill-opacity="0.1" stroke="#ff003c" stroke-opacity="0.4" stroke-width="1" rx="2"/>
-    <circle cx="12" cy="12" r="3" fill="#ff003c" class="pulse"/>
-    <text x="22" y="16" class="tag-text" fill="#ff6b6b">BURP SUITE</text>
-    
-    <rect x="115" y="0" width="70" height="24" fill="#ff003c" fill-opacity="0.1" stroke="#ff003c" stroke-opacity="0.4" stroke-width="1" rx="2"/>
-    <circle cx="127" cy="12" r="3" fill="#ff003c" class="pulse"/>
-    <text x="137" y="16" class="tag-text" fill="#ff6b6b">NMAP</text>
-
-    <rect x="195" y="0" width="105" height="24" fill="#ff003c" fill-opacity="0.1" stroke="#ff003c" stroke-opacity="0.4" stroke-width="1" rx="2"/>
-    <circle cx="207" cy="12" r="3" fill="#ff003c" class="pulse"/>
-    <text x="217" y="16" class="tag-text" fill="#ff6b6b">WIRESHARK</text>
-
-    <rect x="310" y="0" width="110" height="24" fill="#ff003c" fill-opacity="0.1" stroke="#ff003c" stroke-opacity="0.4" stroke-width="1" rx="2"/>
-    <circle cx="322" cy="12" r="3" fill="#ff003c" class="pulse"/>
-    <text x="332" y="16" class="tag-text" fill="#ff6b6b">METASPLOIT</text>
-
-    <rect x="430" y="0" width="75" height="24" fill="#ff003c" fill-opacity="0.1" stroke="#ff003c" stroke-opacity="0.4" stroke-width="1" rx="2"/>
-    <circle cx="442" cy="12" r="3" fill="#ff003c" class="pulse"/>
-    <text x="452" y="16" class="tag-text" fill="#ff6b6b">LINUX</text>
+  <!-- coder silhouette, calm side-profile, own screen light on face -->
+  <g fill="#050705">
+    <!-- hoodie body -->
+    <path d="M 120 400 L 120 300 Q 130 250 190 235 Q 230 225 270 235 Q 330 250 350 300 Q 360 330 355 400 Z"/>
+    <!-- hood at back of neck -->
+    <path d="M 150 260 Q 140 230 175 210 Q 200 200 210 220 Q 190 235 175 260 Z" opacity="0.95"/>
+    <!-- arm reaching to keyboard -->
+    <path d="M 300 300 Q 360 305 410 330 Q 450 345 470 350 L 465 368 Q 420 360 370 345 Q 320 330 290 320 Z"/>
+    <!-- neck -->
+    <path d="M 235 210 L 250 210 L 252 240 L 233 240 Z"/>
+    <!-- head, profile facing right toward the screens -->
+    <path d="M 205 210
+             Q 195 160 235 130
+             Q 275 105 305 130
+             Q 320 145 315 165
+             Q 335 170 330 185
+             Q 325 195 312 195
+             Q 315 215 300 228
+             Q 280 245 255 235
+             Q 220 228 210 210 Z"/>
+    <!-- hair, gentle spikes -->
+    <path d="M 200 165
+             Q 195 120 240 100
+             Q 270 88 300 100
+             Q 330 112 328 140
+             Q 320 125 305 132
+             Q 300 115 285 118
+             Q 282 105 265 110
+             Q 255 100 245 112
+             Q 230 105 222 122
+             Q 205 130 205 165 Z"/>
+    <!-- ear -->
+    <path d="M 213 175 Q 205 178 206 190 Q 208 198 216 195 Z"/>
+  </g>
+  <!-- glasses, thin line, catching screen light -->
+  <g stroke="#0d2a16" stroke-width="3" fill="none" opacity="0.9">
+    <ellipse cx="283" cy="172" rx="20" ry="14"/>
+    <path d="M 303 170 L 312 168"/>
   </g>
 
-  <g transform="translate(70, 550)">
-    <rect x="0" y="0" width="55" height="24" fill="#00ff41" fill-opacity="0.08" stroke="#00ff41" stroke-opacity="0.4" stroke-width="1" rx="2"/>
-    <circle cx="12" cy="12" r="3" fill="#00ff41" class="pulse"/>
-    <text x="22" y="16" class="tag-text" fill="#00ff41">C++</text>
-    
-    <rect x="65" y="0" width="80" height="24" fill="#00ff41" fill-opacity="0.08" stroke="#00ff41" stroke-opacity="0.4" stroke-width="1" rx="2"/>
-    <circle cx="77" cy="12" r="3" fill="#00ff41" class="pulse"/>
-    <text x="87" y="16" class="tag-text" fill="#00ff41">PYTHON</text>
+  <!-- warm rim light on the figure's edge, subtle -->
+  <ellipse cx="230" cy="260" rx="170" ry="170" fill="url(#figureRim)" filter="url(#blurSoft)"/>
 
-    <rect x="155" y="0" width="75" height="24" fill="#00ff41" fill-opacity="0.08" stroke="#00ff41" stroke-opacity="0.4" stroke-width="1" rx="2"/>
-    <circle cx="167" cy="12" r="3" fill="#00ff41" class="pulse"/>
-    <text x="177" y="16" class="tag-text" fill="#00ff41">REACT</text>
-
-    <rect x="240" y="0" width="60" height="24" fill="#00ff41" fill-opacity="0.08" stroke="#00ff41" stroke-opacity="0.4" stroke-width="1" rx="2"/>
-    <circle cx="252" cy="12" r="3" fill="#00ff41" class="pulse"/>
-    <text x="262" y="16" class="tag-text" fill="#00ff41">SQL</text>
-
-    <rect x="310" y="0" width="90" height="24" fill="#00ff41" fill-opacity="0.08" stroke="#00ff41" stroke-opacity="0.4" stroke-width="1" rx="2"/>
-    <circle cx="322" cy="12" r="3" fill="#00ff41" class="pulse"/>
-    <text x="332" y="16" class="tag-text" fill="#00ff41">NODE.JS</text>
-    
-    <rect x="410" y="0" width="75" height="24" fill="#00ff41" fill-opacity="0.08" stroke="#00ff41" stroke-opacity="0.4" stroke-width="1" rx="2"/>
-    <circle cx="422" cy="12" r="3" fill="#00ff41" class="pulse"/>
-    <text x="432" y="16" class="tag-text" fill="#00ff41">REDIS</text>
-  </g>
-
-  <g transform="translate(70, 590)">
-    <rect x="0" y="0" width="85" height="24" fill="#00f5ff" fill-opacity="0.08" stroke="#00f5ff" stroke-opacity="0.4" stroke-width="1" rx="2"/>
-    <circle cx="12" cy="12" r="3" fill="#00f5ff" class="pulse"/>
-    <text x="22" y="16" class="tag-text" fill="#00f5ff">DOCKER</text>
-
-    <rect x="95" y="0" width="115" height="24" fill="#00f5ff" fill-opacity="0.08" stroke="#00f5ff" stroke-opacity="0.4" stroke-width="1" rx="2"/>
-    <circle cx="107" cy="12" r="3" fill="#00f5ff" class="pulse"/>
-    <text x="117" y="16" class="tag-text" fill="#00f5ff">KUBERNETES</text>
-
-    <rect x="220" y="0" width="65" height="24" fill="#00f5ff" fill-opacity="0.08" stroke="#00f5ff" stroke-opacity="0.4" stroke-width="1" rx="2"/>
-    <circle cx="232" cy="12" r="3" fill="#00f5ff" class="pulse"/>
-    <text x="242" y="16" class="tag-text" fill="#00f5ff">CUDA</text>
-
-    <rect x="295" y="0" width="65" height="24" fill="#00f5ff" fill-opacity="0.08" stroke="#00f5ff" stroke-opacity="0.4" stroke-width="1" rx="2"/>
-    <circle cx="307" cy="12" r="3" fill="#00f5ff" class="pulse"/>
-    <text x="317" y="16" class="tag-text" fill="#00f5ff">AWS</text>
-
-    <rect x="370" y="0" width="85" height="24" fill="#00f5ff" fill-opacity="0.08" stroke="#00f5ff" stroke-opacity="0.4" stroke-width="1" rx="2"/>
-    <circle cx="382" cy="12" r="3" fill="#00f5ff" class="pulse"/>
-    <text x="392" y="16" class="tag-text" fill="#00f5ff">OPENMP</text>
-    
-    <rect x="465" y="0" width="90" height="24" fill="#00f5ff" fill-opacity="0.08" stroke="#00f5ff" stroke-opacity="0.4" stroke-width="1" rx="2"/>
-    <circle cx="477" cy="12" r="3" fill="#00f5ff" class="pulse"/>
-    <text x="487" y="16" class="tag-text" fill="#00f5ff">ARDUINO</text>
-  </g>
-
-  <line x1="60" y1="710" x2="800" y2="710" stroke="#00ff41" stroke-width="1" opacity="0.15"/>
-
-  <text x="70" y="740" class="status">[ STATUS: ONLINE ]</text>
-  <text x="230" y="740" class="status">[ MODE: ENGINEERING ]</text>
-  <text x="405" y="740" class="status">[ PROXY: ACTIVE ]</text>
-  <text x="560" y="740" class="status">[ THREAT LEVEL: HIGH ]</text>
-
-  <line x1="70" y1="760" x2="70" y2="780" stroke="#00ff41" stroke-width="2" filter="url(#glow-sm)"/>
-  <text x="85" y="770" class="dim" font-style="italic">"Think like an attacker. Build like a defender."</text>
-  <text x="85" y="785" class="status">— Gaurav Kumar</text>
-
-  <rect width="860" height="820" fill="url(#scanlines)" opacity="0.9" pointer-events="none"/>
-  <rect x="0" y="0" width="860" height="2" fill="#00ff41" opacity="0.4" class="scan-line" filter="url(#glow)" pointer-events="none"/>
-
-  <g filter="url(#glow-sm)" opacity="0.6" pointer-events="none">
-    <path d="M 10 70 L 10 10 L 70 10 M 10 10 L 30 30" fill="none" stroke="#00ff41" stroke-width="1.5"/>
-    <path d="M 790 10 L 850 10 L 850 70 M 850 10 L 830 30" fill="none" stroke="#00ff41" stroke-width="1.5"/>
-    <path d="M 10 750 L 10 810 L 70 810 M 10 810 L 30 790" fill="none" stroke="#00ff41" stroke-width="1.5"/>
-    <path d="M 790 810 L 850 810 L 850 750 M 850 810 L 830 790" fill="none" stroke="#00ff41" stroke-width="1.5"/>
+  <!-- ambient floating particles -->
+  <g fill="#00ff41">
+    <circle cx="500" cy="90" r="2.5" opacity="0.5">
+      <animate attributeName="cy" values="90;70;90" dur="6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="560" cy="150" r="2" opacity="0.35">
+      <animate attributeName="cy" values="150;125;150" dur="7.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1000" cy="120" r="2" opacity="0.3">
+      <animate attributeName="cy" values="120;100;120" dur="8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="950" cy="330" r="2" opacity="0.25">
+      <animate attributeName="cy" values="330;310;330" dur="6.5s" repeatCount="indefinite"/>
+    </circle>
   </g>
 </svg>
